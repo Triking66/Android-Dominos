@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.owner.dominos.GameActivity">
+
+    <com.example.owner.dominos.DominoScreen
+        android:id="@+id/Domino_Screen"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/TotalText"/>
+
+    <TextView
+        android:id="@+id/TotalText"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Total: 0"
+        app:layout_constraintBottom_toTopOf="@+id/Unplaying2"
+        app:layout_constraintTop_toBottomOf="@+id/Domino_Screen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/Unplaying1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Player 2 : 0"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintVertical_weight="50"
+        app:layout_constraintBottom_toTopOf="@+id/Playing"
+        app:layout_constraintRight_toLeftOf="@+id/Unplaying2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TotalText" />
+
+    <TextView
+        android:id="@+id/Unplaying2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Player 3 : 0"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintVertical_weight="50"
+        app:layout_constraintBottom_toTopOf="@+id/Playing"
+        app:layout_constraintRight_toLeftOf="@+id/Unplaying3"
+        app:layout_constraintLeft_toRightOf="@+id/Unplaying1"
+        app:layout_constraintTop_toBottomOf="@+id/TotalText" />
+
+    <TextView
+        android:id="@+id/Unplaying3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Player 4 : 0"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintVertical_weight="50"
+        app:layout_constraintLeft_toRightOf="@+id/Unplaying2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TotalText"
+        app:layout_constraintBottom_toTopOf="@+id/Playing"/>
+
+    <Button
+        android:id="@+id/Skip"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Skip Turn"
+        app:layout_constraintRight_toLeftOf="@+id/Playing"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Unplaying1"
+        app:layout_constraintBottom_toTopOf="@+id/Pieces"/>
+
+    <TextView
+        android:id="@+id/Playing"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Player 1 : 0"
+        app:layout_constraintVertical_weight="50"
+        app:layout_constraintRight_toLeftOf="@+id/Exit"
+        app:layout_constraintLeft_toRightOf="@+id/Skip"
+        app:layout_constraintBottom_toTopOf="@+id/Pieces"
+        app:layout_constraintTop_toBottomOf="@+id/Unplaying2" />
+
+    <Button
+        android:id="@+id/Exit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Exit Game"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/Playing"
+        app:layout_constraintTop_toBottomOf="@+id/Unplaying3"
+        app:layout_constraintBottom_toTopOf="@+id/Pieces"/>
+
+    <com.example.owner.dominos.DominoView
+        android:id="@+id/Pieces"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Playing"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

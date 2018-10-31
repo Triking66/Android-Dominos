@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.owner.dominos.SettingsActivity">
+
+    <TextView
+        android:id="@+id/ModeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mode"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Modes"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <RadioGroup
+    android:id="@+id/Modes"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    app:layout_constraintTop_toBottomOf="@+id/ModeText"
+    app:layout_constraintBottom_toTopOf="@+id/PieceText"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent">
+
+        <RadioButton
+            android:id="@+id/Runout"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="24sp"
+            android:text="Runout" />
+
+        <RadioButton
+            android:id="@+id/Points"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="25sp"
+            android:text="Points"/>
+
+        <RadioButton
+            android:id="@+id/Matador"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="25sp"
+            android:text="Matador"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/PieceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Pieces"
+        app:layout_constraintTop_toBottomOf="@+id/Modes"
+        app:layout_constraintBottom_toTopOf="@+id/PieceNum"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/PieceNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/PieceText"
+        app:layout_constraintBottom_toTopOf="@+id/AIPlayers"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <RadioButton
+            android:id="@+id/Six"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="25sp"
+            android:text="0-6"/>
+
+        <RadioButton
+            android:id="@+id/Nine"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="25sp"
+            android:text="0-9"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/AIPlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of AI Players"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/PieceNum"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/NumAI"/>
+
+    <RadioGroup
+        android:id="@+id/NumAI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/AIPlayers"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/Begin">
+
+        <RadioButton
+            android:id="@+id/ZeroAI"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="25sp"
+            android:text="None"/>
+
+        <RadioButton
+            android:id="@+id/OneAI"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="25sp"
+            android:text="One"/>
+
+        <RadioButton
+            android:id="@+id/TwoAI"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="25sp"
+            android:text="Two"/>
+
+        <RadioButton
+            android:id="@+id/ThreeAI"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="25sp"
+            android:text="Three"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/Begin"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:textSize="25sp"
+        android:text="Begin Game"
+        app:layout_constraintTop_toBottomOf="@+id/NumAI"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/ExitSet" />
+
+    <Button
+        android:id="@+id/ExitSet"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:textSize="25sp"
+        android:text="Return "
+        app:layout_constraintTop_toBottomOf="@+id/NumAI"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/Begin"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
